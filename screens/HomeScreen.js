@@ -14,6 +14,8 @@ import { MonoText } from '../components/StyledText';
 
 import { Container, Header, Content, Button, Text, Left } from 'native-base';
 
+import { AddButton } from '../components/AddButton';
+
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
 
@@ -24,8 +26,13 @@ export default class HomeScreen extends React.Component {
 
       <Container contentContainerstyle={styles.main}>
         <Content contentContainerstyle={styles.mainCenter}>
-        <Content>
+        <Content padder>
           <Text style={styles.text}>Here is some text</Text>
+          <Button onPress={showAlert}>
+            <Text style={{textAlign: 'center'}}>Click Me!</Text>
+          </Button>
+          <MonoText>Hello</MonoText>
+          <AddButton>AddButton</AddButton>
         </Content>
         </Content>
       </Container>

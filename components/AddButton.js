@@ -1,24 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Icon, Fab } from 'native-base';
-import COLORS from '../constants/Colors';
+import { Alert } from 'react-native';
+import { Container, Header, Content, Button, Text} from 'native-base';
 
-const propTypes = {
-  onPress: PropTypes.func.isRequired,
-};
+export class AddButton extends React.Component {
+  render() {
+    return (
+      <Button onPress={showAlert}>
+        <Text>Touch Huuurrrr</Text>
+      </Button>
+    );
+  }
+}
 
-const AddTodoButton = ({ onPress }) => (
-  <Fab
-    direction="up"
-    containerStyle={{}}
-    style={{ backgroundColor: COLORS.primary }}
-    position="bottomRight"
-    onPress={onPress}
-  >
-    <Icon name="add" />
-  </Fab>
-);
-
-AddTodoButton.propTypes = propTypes;
-
-export default AddTodoButton;
+const showAlert = () =>{
+   Alert.alert(
+      'Alert!'
+   )
+}
