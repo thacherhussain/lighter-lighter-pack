@@ -15,7 +15,16 @@ import { Provider } from 'react-redux'
 
 import { WebBrowser } from 'expo';
 
-import { Container, Header, Content, Button, Text } from 'native-base';
+import {
+  Container,
+  Header,
+  Content,
+  Button,
+  Text,
+  Form,
+  Item,
+  Input,
+ } from 'native-base';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -36,6 +45,19 @@ export default class HomeScreen extends React.Component {
             onPress={() => this.props.navigation.navigate('LinksStack')}
             style={styles.button}>
             <Text style={{textAlign: 'center'}}>Links</Text>
+          </Button>
+          <Form>
+            <Item>
+              <Input placeholder="Username"/>
+            </Item>
+            <Item last>
+              <Input placeholder="Password" />
+            </Item>
+          </Form>
+          <Button
+            block
+            onPress={() => this.props.navigation.navigate('LinksStack')}>
+            <Text style={{textAlign: 'center'}}>Sign In</Text>
           </Button>
         </Content>
       </Container>

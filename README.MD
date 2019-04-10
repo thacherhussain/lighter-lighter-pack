@@ -13,16 +13,21 @@ Test:
 Next Features:
 
 To run this locally:
+`git clone xxx`
+`cd lighter-lighter-pack && npm install`
+`expo start`
 
 Using:
 - React Native (with Expo)
 - Redux
 - React Navigation
-- Native base
+- Native Base
 - Easy Grid (per Native Base)
 
 Add:
+- Axios
 - Storybook
+- Prettier Linting -- ESLint
 
 
 
