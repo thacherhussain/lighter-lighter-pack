@@ -1,8 +1,14 @@
 # React Native App to track your gear
 
-Objective:
+Objective: Build a mobile application to track and manage outdoor gear for adventures and storage
 
 Process:
+- Define requirements
+-
+
+Requirements:
+- React Native
+
 
 Wireframes:
 
@@ -25,7 +31,7 @@ Using:
 - Easy Grid (per Native Base)
 
 Add:
-- Axios
+- Axios (Harry Potter API)
 - Storybook
 - Prettier Linting -- ESLint
 
