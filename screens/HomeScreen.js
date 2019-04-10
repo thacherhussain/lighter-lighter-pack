@@ -26,20 +26,32 @@ export default class HomeScreen extends React.Component {
     return (
 
       <Container>
-        <Provider store={store}>
-          <TodoApp />
-        </Provider>
+        <Content padder>
+          <Provider store={store}>
+            <TodoApp />
+          </Provider>
+
+          <Button
+            block
+            onPress={() => this.props.navigation.navigate('LinksStack')}
+            style={styles.button}>
+            <Text style={{textAlign: 'center'}}>Links</Text>
+          </Button>
+        </Content>
       </Container>
 
     );
   }
 }
 
+const showAlert = () =>{
+   Alert.alert(
+      'Alert!'
+   )
+}
+
 const styles = StyleSheet.create({
-  text: {
-    color: '#0F7173',
-    fontWeight: 'bold',
-    fontSize: 30,
-    padding: 50,
+  button: {
+  backgroundColor: '#BF3A2C',
   },
 });

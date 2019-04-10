@@ -18,14 +18,14 @@ export default class LinksScreen extends React.Component {
             <Text style={{textAlign: 'center'}}>Click Me!</Text>
           </Button>
         </Content>
-          <Content padder>
-              <Button
-                block
-                onPress={() => this.props.navigation.navigate('HomeStack')}
-                style={styles.otherButton}>
-                  <Text>Home</Text>
-              </Button>
-            </Content>
+        <Content padder>
+          <Button
+            block
+            onPress={() => this.props.navigation.navigate('HomeStack')}
+            style={styles.otherButton}>
+              <Text>Home</Text>
+          </Button>
+        </Content>
       </Container>
     );
   }
@@ -39,9 +39,12 @@ const showAlert = () =>{
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#FF715B',
+    backgroundColor: '#BF3A2C',
   },
   otherButton: {
-    backgroundColor: '#0F7173',
+    backgroundColor: '#E2564C',
+  },
+  contentSpacing: {
+    justifyContent: 'space-between',
   },
 });

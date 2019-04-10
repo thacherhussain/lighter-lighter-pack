@@ -14,6 +14,16 @@ Next Features:
 
 To run this locally:
 
+Using:
+- React Native (with Expo)
+- Redux
+- React Navigation
+- Native base
+- Easy Grid (per Native Base)
+
+Add:
+- Storybook
+
 
 
 Inspired by the LighterPack website: https://github.com/galenmaly/lighterpack
