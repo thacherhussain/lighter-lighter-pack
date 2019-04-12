@@ -1,44 +1,43 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { Provider } from 'react-redux';
-
-// import { WebBrowser } from 'expo';
-
+import CharacterList from '../components/CharacterList';
 import {
   Container,
+  Header,
+  Body,
+  Title,
+  Left,
+  Right,
   Content,
-  Button,
   Text,
-  Form,
-  Item,
-  Input,
+  Card,
+  CardItem,
 } from 'native-base';
 
-import TodoApp from '../components/TodoApp';
-import store from '../store';
+import axios from 'axios';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-
+    header: null,
   };
 
   render() {
-    return (
 
+    return (
       <Container>
+        <Header>
+          <Left />
+          <Body>
+            <Title>Home</Title>
+          </Body>
+          <Right />
+        </Header>
+
         <Content padder>
-          <Text>Hello</Text>
+          <CharacterList />
         </Content>
+
       </Container>
 
     );
   }
 }
-
-
-const styles = StyleSheet.create({
-  redButton: {
-  backgroundColor: '#BF3A2C',
-  margin: 5,
-  },
-});
