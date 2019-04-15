@@ -4,7 +4,9 @@ import {
   Card,
   CardItem,
   Text,
+  Button,
 } from 'native-base';
+import { Col, Row, Grid } from 'react-native-easy-grid';
 
 const CharacterDetail = ({ character }) =>  {
   const { name, house, role, image_url } = character;
@@ -17,14 +19,15 @@ const CharacterDetail = ({ character }) =>  {
           <Image source={{uri: image_url}} style={{height: 400, width: null, flex: 1}}/>
         </CardItem>
         <CardItem>
-          <Text>{image_url}</Text>
-        </CardItem>
-        <CardItem>
           <Text>House: {house}</Text>
         </CardItem>
         <CardItem>
           <Text>Role: {role}</Text>
         </CardItem>
+        <View style={{ flexDirection:'row' }}>
+          <Button info style={styles.button}><Text> Edit </Text></Button>
+          <Button danger style={styles.button}><Text> Delete </Text></Button>
+        </View>
     </Card>
   );
 };
@@ -35,6 +38,9 @@ const styles = {
     fontWeight: 'bold',
     margin: 15,
     whiteSpace: 'pre-line',
+  },
+  button: {
+    margin: 10
   }
 }
 
