@@ -1,6 +1,14 @@
 import React from 'react';
 import { StyleSheet, Alert } from 'react-native';
-import { Container, Header, Content, Button, Text, Form, Item, Input } from 'native-base';
+import {
+  Container,
+  Header,
+  Content,
+  Button,
+  Text,
+  Form,
+  Item,
+  Input } from 'native-base';
 import { Provider } from 'react-redux';
 
 import TodoApp from '../components/TodoApp';
@@ -27,7 +35,7 @@ export default class LinksScreen extends React.Component {
             style={[styles.button, styles.pinkButton]}>
               <Text>Home</Text>
           </Button>
-        
+
           <Provider store={store}>
             <TodoApp />
           </Provider>
