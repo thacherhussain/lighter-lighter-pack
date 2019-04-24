@@ -35,6 +35,11 @@ Add:
 - Storybook
 - Prettier Linting -- ESLint
 
+try using redux-form
+
+react-native-typography
+storybook and storybook-deployer
+
 
 
 Inspired by the LighterPack website: https://github.com/galenmaly/lighterpack

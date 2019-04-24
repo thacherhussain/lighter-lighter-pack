@@ -22,7 +22,7 @@ export class AddButton extends React.Component {
   }
 }
 
-const showAlert = () =>{
+const showAlert = () => {
    Alert.alert(
       'Alert!'
    )
