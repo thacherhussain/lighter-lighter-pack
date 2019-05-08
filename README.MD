@@ -1,6 +1,8 @@
-# React Native App to track your gear
+# React Native application to track your gear
 
-Objective: Build a mobile application to track and manage outdoor gear for adventures and storage
+*IN PROGRESS*
+
+Objective: Build a mobile application to track and manage outdoor gear for adventures and storage (and learn/solidify understanding of React Native)
 
 Process:
 - Define requirements
@@ -29,9 +31,9 @@ Using:
 - React Navigation
 - Native Base
 - Easy Grid (per Native Base)
+- Axios (Harry Potter API)
 
 Add:
-- Axios (Harry Potter API)
 - Storybook
 - Prettier Linting -- ESLint
 
