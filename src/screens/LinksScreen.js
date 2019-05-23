@@ -3,12 +3,17 @@ import { StyleSheet, Alert } from 'react-native';
 import {
   Container,
   Header,
+  Body,
+  Title,
+  Left,
+  Right,
   Content,
-  Button,
   Text,
+  Button,
   Form,
   Item,
-  Input } from 'native-base';
+  Input,
+} from 'native-base';
 import { Provider } from 'react-redux';
 
 import TodoApp from '../components/TodoApp';
@@ -24,16 +29,27 @@ export default class LinksScreen extends React.Component {
   render() {
     return (
       <Container>
-        <Header />
+      <Header>
+        <Left />
+        <Body>
+          <Title>Links</Title>
+        </Body>
+        <Right />
+      </Header>
         <Content padder>
-          <Button block onPress={showAlert} style={[styles.button, styles.redButton]}>
-            <Text style={{ textAlign: 'center' }}>Click Me!</Text>
-          </Button>
           <Button
             block
             onPress={() => this.props.navigation.navigate('HomeStack')}
-            style={[styles.button, styles.pinkButton]}>
-              <Text>Home</Text>
+            style={[styles.button]}
+            >
+            <Text>Home</Text>
+          </Button>
+          <Button
+            success
+            block
+            onPress={() => this.props.navigation.navigate('GearStack')}
+            style={[styles.button]}>
+              <Text>Gear</Text>
           </Button>
 
           <Provider store={store}>
@@ -48,12 +64,6 @@ export default class LinksScreen extends React.Component {
               <Input placeholder="Password" />
             </Item>
           </Form>
-          <Button
-            block
-            onPress={() => this.props.navigation.navigate('LinksStack')}>
-            <Text style={{ textAlign: 'center' }}>Sign In</Text>
-          </Button>
-
 
         </Content>
       </Container>
@@ -72,7 +82,7 @@ const styles = StyleSheet.create({
     margin: 5,
   },
   redButton: {
-    backgroundColor: '#BF3A2C',
+    backgroundColor: 'red',
   },
   pinkButton: {
     backgroundColor: '#E2564C',

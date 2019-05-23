@@ -42,7 +42,8 @@ try using redux-form
 react-native-typography
 storybook and storybook-deployer
 
-
+To Run Locally:
+`expo start`
 
 Inspired by the LighterPack website: https://github.com/galenmaly/lighterpack
 

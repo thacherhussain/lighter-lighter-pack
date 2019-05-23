@@ -35,6 +35,20 @@ export default class HomeScreen extends React.Component {
         </Header>
 
         <Content padder>
+          <Button
+            info
+            block
+            onPress={() => this.props.navigation.navigate('LinksStack')}
+            style={[styles.button]}>
+              <Text>Links</Text>
+          </Button>
+          <Button
+            success
+            block
+            onPress={() => this.props.navigation.navigate('GearStack')}
+            style={[styles.button]}>
+              <Text>Gear</Text>
+          </Button>
           <CharacterList />
         </Content>
       </Container>
