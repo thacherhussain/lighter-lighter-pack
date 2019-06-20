@@ -1,8 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-import { Container, Header, Left, Body, Right, Icon, Title } from 'native-base';
+import { Container, Header, Left, Body, Right, Icon, Title, Button } from 'native-base';
 
+import FullWidthButton from '../components/FullWidthButton';
+import AddButton from '../components/AddButton';
 
 class MyCustomHeaderBackImage extends React.Component {
   render() {
@@ -19,17 +21,30 @@ class MyCustomHeaderBackImage extends React.Component {
 class GearScreen extends React.Component {
   static navigationOptions = {
     headerTitle: "Details",
-
     headerBackTitle: null,
   };
+
+
   render() {
     return (
+
+
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <Text>Gear Hello Screen</Text>
         <Button
-          title="Details"
+          block
+          info
           onPress={() => this.props.navigation.navigate('Details')}
-        />
+          style={[styles.button]}>
+          <Text>Details</Text>
+        </Button>
+        <Button
+          block
+          onPress={() => this.props.navigation.navigate('HomeStack')}
+          style={[styles.button]}
+          >
+          <Text>Home</Text>
+        </Button>
       </View>
     );
   }
@@ -79,6 +94,9 @@ const styles = StyleSheet.create({
   },
   myCustomHeaderBackImageAlt: {
     tintColor: '#f00',
+  },
+  button: {
+    margin: 5,
   },
 });
 
