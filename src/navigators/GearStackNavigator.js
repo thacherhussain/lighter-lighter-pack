@@ -4,9 +4,14 @@ import { createStackNavigator } from 'react-navigation';
 
 import GearScreen from '../screens/GearScreen';
 
-const GearStack = createStackNavigator({
-  Gear : GearScreen,
-});
+const GearStack = createStackNavigator(
+  {
+    Gear : GearScreen,
+  },
+  {
+    headerMode: 'none'
+  }
+);
 
 GearStack.navigationOptions = {
   header: null,
