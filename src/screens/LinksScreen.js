@@ -19,6 +19,8 @@ import { Provider } from 'react-redux';
 import TodoApp from '../components/TodoApp';
 import store from '../store';
 
+import FullWidthButton from '../components/FullWidthButton';
+
 export default class LinksScreen extends React.Component {
   static navigationOptions = {
     // title: 'Links',
@@ -37,6 +39,11 @@ export default class LinksScreen extends React.Component {
         <Right />
       </Header>
         <Content padder>
+          <FullWidthButton
+            onPress={() => this.props.navigation.navigate('HomeStack')}
+            title="FullWidthButton"
+            />
+          
           <Button
             block
             onPress={() => this.props.navigation.navigate('HomeStack')}

@@ -6,15 +6,19 @@ import { Button, Text, Icon, Fab } from 'native-base';
 
 class FullWidthButton extends React.Component {
 
+  onPress = () => {
+    const { navigateSignUpCreateAccount } = this.props;
+    navigateSignUpCreateAccount();
+  };
 
   render() {
     return (
       <Button
         block
-        onPress={onPress}
+        onPress={this.onPress}
         style={[styles.button]}
         >
-        <Text>Home</Text>
+        <Text>{this.title}</Text>
       </Button>
     );
   }
@@ -24,6 +28,7 @@ class FullWidthButton extends React.Component {
 
 FullWidthButton.propTypes = {
   onPress: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 const styles = StyleSheet.create({
